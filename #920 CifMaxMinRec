@@ -1,0 +1,12 @@
+void cifmaxmin(int n,int &imax,int &imin)
+{
+    if(n<10){
+        imax=n;imin=n;
+    }
+    else{
+        cifmaxmin(n/10,imax,imin);
+        imax=std::max(imax,n%10);
+        imin=std::min(imin,n%10);
+    
+    }
+}
